@@ -23,36 +23,4 @@
 
     <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="19dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
-
-    <Button
-        android:id="@+id/send_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/user_input"
-        android:layout_alignTop="@+id/user_input"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="76dp"
-        android:text="Send" />
-
-    <EditText
-        android:id="@+id/user_input"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/appBarLayout"
-        android:layout_marginEnd="46dp"
-        android:layout_marginTop="57dp"
-        android:layout_toStartOf="@+id/fab"
-        android:ems="10"
-        android:inputType="textPersonName"/>
-
 </RelativeLayout>
