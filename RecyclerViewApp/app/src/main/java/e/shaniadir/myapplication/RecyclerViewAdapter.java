@@ -17,7 +17,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     Context mcontext;
     View mview;
     ViewHolder mviewHolder;
-    TextView mtextView;
 
     public RecyclerViewAdapter(Context context, String[] placesValues) {
 
@@ -27,13 +26,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView textView;
+        TextView mtextView;
 
         public ViewHolder(View view) {
 
             super(view);
 
-            textView = (TextView) view.findViewById(R.id.places_textview);
+            mtextView = (TextView) view.findViewById(R.id.places_textview);
         }
     }
 
@@ -50,7 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        holder.textView.setText(mplacesValues[position]);
+        holder.mtextView.setText(mplacesValues[position]);
     }
 
     @Override

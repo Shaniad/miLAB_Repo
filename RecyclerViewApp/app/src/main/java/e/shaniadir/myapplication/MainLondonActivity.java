@@ -15,7 +15,10 @@ public class MainLondonActivity extends AppCompatActivity {
     LinearLayout relativeLayout;
     RecyclerView.Adapter recyclerViewAdapter;
     RecyclerView.LayoutManager recylerViewLayoutManager;
-    String[] londonPlacesDataset = {"Big Ben", "London Eye", "London Bridge", "Buckingham Palace", "Hyde Park"};
+    String[] londonPlacesDataset =
+            {"Big Ben", "London Eye", "London Bridge", "Buckingham Palace", "Hyde Park",
+                    "Madame Tussauds", "Tower of London", "River Thames", "Piccadilly Circus",
+                    "Leicester Square", "Oxford Street", "Wimbledon"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

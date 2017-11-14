@@ -14,7 +14,10 @@ public class MainParisActivity extends AppCompatActivity {
     LinearLayout relativeLayout;
     RecyclerView.Adapter recyclerViewAdapter;
     RecyclerView.LayoutManager recylerViewLayoutManager;
-    String[] parisPlacesDataset = {"Eiffel Tower", "Louvre Museum", "Tuileries Garden", "Montmartre", "Arc de Triomphe"};
+    String[] parisPlacesDataset =
+            {"Eiffel Tower", "Louvre Museum", "Tuileries Garden", "Montmartre", "Arc de Triomphe",
+                    "Conciergerie", "Grand Palais", "Seine River", "Notre-Dame Cathedral",
+                    "Centre Pompidou", "Pantheon", "Disneyland"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
