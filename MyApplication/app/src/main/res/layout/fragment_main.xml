@@ -14,8 +14,6 @@
         android:text="Show quote every"
         android:textSize="22dp"
         app:layout_constraintBottom_toTopOf="@+id/start_button"
-        app:layout_constraintEnd_toStartOf="@+id/minutes_editText"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,22 +27,8 @@
         android:textSize="22dp"
         app:layout_constraintBottom_toTopOf="@+id/start_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/minutes_editText"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/minutes_editText"
-        android:layout_width="74dp"
-        android:layout_height="56dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/start_button"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.489" />
 
     <Button
         android:id="@+id/start_button"
@@ -54,6 +38,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/minutes_editText" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <NumberPicker
+        android:id="@+id/minutesPicker"
+        android:layout_width="67dp"
+        android:layout_height="114dp"
+        app:layout_constraintBottom_toTopOf="@+id/start_button"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

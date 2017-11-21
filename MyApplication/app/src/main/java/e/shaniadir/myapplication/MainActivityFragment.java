@@ -26,7 +26,7 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View main_view = inflater.inflate(R.layout.fragment_main, container, false);
         Button start_button = (Button)main_view.findViewById(R.id.start_button);
-        final EditText minutes = (EditText)main_view.findViewById(R.id.minutes_editText);
+        final EditText minutes = (EditText)main_view.findViewById(R.id.minutesPicker);
         start_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
