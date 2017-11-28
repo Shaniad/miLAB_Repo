@@ -25,14 +25,14 @@
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/search_results_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/query_editText" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/search_results_textView"
         android:layout_width="305dp"
         android:layout_height="229dp"
         android:text=""
