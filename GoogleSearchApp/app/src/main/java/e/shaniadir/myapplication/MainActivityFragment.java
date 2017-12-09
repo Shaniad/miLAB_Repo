@@ -33,18 +33,18 @@ public class MainActivityFragment extends Fragment {
         final RequestQueue queue = Volley.newRequestQueue(getContext());
         final String url = "http://www.google.com/search?q=";
         final EditText query = (EditText)main_view.findViewById(R.id.query_editText);
-        final TextView results = (TextView)main_view.findViewById(R.id.search_results_textView);
+        final TextView showResults = (TextView)main_view.findViewById(R.id.search_results_textView);
         Button search = (Button)main_view.findViewById(R.id.search_button);
         Log.d("debug", "success0");
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("debug", "success1");
-                StringRequest req = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                StringRequest req = new StringRequest(Request.Method.GET, url + query.getText(), new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Log.d("MainActivityFragment", "Response - " + response);
-                        results.setText(response);
+                        showResults.setText(Functionality.getFirstResult(response));
                     }
                 }, new Response.ErrorListener() {
                     @Override
