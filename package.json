@@ -1,0 +1,27 @@
+{
+  "name": "milab_server",
+  "version": "1.0.0",
+  "description": "server_ex7",
+  "main": "home.js",
+  "scripts": {
+    "test": "milab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaniad/miLAB_Repo.git"
+  },
+  "keywords": [
+    "server"
+  ],
+  "author": "shani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shaniad/miLAB_Repo/issues"
+  },
+  "homepage": "https://github.com/Shaniad/miLAB_Repo#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "node-datetime": "^2.0.3"
+  }
+}
