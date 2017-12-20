@@ -3,6 +3,8 @@ const datetime = require('node-datetime');
 const fs = require('fs');
 let app = express();
 
+let port = process.env.PORT || 4000
+
 app.get('/getTime', (req, res) => {
 	let server_time = datetime.create();
 	res.send('Server time is: ' + server_time.format('H:M:S d/m/y'));
@@ -19,6 +21,6 @@ app.get('/getFile', (req, res) => {
   });
 });
 
-app.listen(4000, () => {
+app.listen(port, () => {
 	console.log('Listening on port 4000');
 });

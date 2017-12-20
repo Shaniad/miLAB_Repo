@@ -1,0 +1,3 @@
+server URL: https://milab-server.herokuapp.com/
+server getTime URL: https://milab-server.herokuapp.com/getTime
+server getFile URL: https://milab-server.herokuapp.com/?filename=test
