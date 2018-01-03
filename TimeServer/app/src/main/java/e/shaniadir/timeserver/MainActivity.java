@@ -6,11 +6,19 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
         Button getTimeButton = (Button)findViewById(R.id.get_time_button);
         getTimeButton.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 final TimeFetcher fetcher = new TimeFetcher(view.getContext());
 
 
                 final ProgressDialog progressDialog = new ProgressDialog(view.getContext());
+                final RequestQueue _queue = Volley.newRequestQueue(view.getContext());
                 progressDialog.setMessage("Fetching server time...");
                 progressDialog.show();
 
@@ -37,11 +46,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(TimeFetcher.TimeResponse response) {
                        progressDialog.hide();
-
                         serverTimeView.setText(response.time);
                     }
                 });
+
             }
+
         });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -75,22 +85,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-/*
-    public void fetchTime(final View view){
-        final TimeFetcher fetcher = new TimeFetcher(view.getContext());
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Fetching server time...");
-        progressDialog.show();
-
-        fetcher.dispatchRequest(new TimeFetcher.TimeResponseListener() {
-            @Override
-            public void onResponse(TimeFetcher.TimeResponse response) {
-                progressDialog.hide();
-
-                serverTimeView.setText(response.time);
-            }
-        });
-
-    }
-    */
 }

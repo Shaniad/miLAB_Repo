@@ -8,6 +8,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -37,17 +38,14 @@ public class TimeFetcher {
 
     public void dispatchRequest(final TimeResponseListener listener){
 
-        JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, REQUEST_URL, null,
-                new Response.Listener<JSONObject>() {
+        StringRequest req = new StringRequest(Request.Method.GET, REQUEST_URL,
+                new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            TimeResponse res = new TimeResponse(
-                                    response.getString("server_time"));
-                            Log.d("server_time", "gettime");
-                            listener.onResponse(res);
-                        }
-                        catch (JSONException e) {}
+                    public void onResponse(String response) {
+                        TimeResponse res = new TimeResponse(
+                                response);
+                        Log.d("server_time", "gettime");
+                        listener.onResponse(res);
                     }
                 }, new Response.ErrorListener() {
             @Override
@@ -57,4 +55,5 @@ public class TimeFetcher {
 
         _queue.add(req);
     }
+
 }
